@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Estilo Rvops</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        :root {
+            --sidebar-bg: #1e293b;
+            --sidebar-hover: #334155;
+            --active-color: #3b82f6;
+            --text-color: #f8fafc;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--sidebar-bg);
+            color: var(--text-color);
+            padding: 20px 0;
+            position: fixed;
+        }
+
+        .logo {
+            padding: 0 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--active-color);
+            border-bottom: 1px solid #334155;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .nav-item:hover {
+            background-color: var(--sidebar-hover);
+        }
+
+        .nav-item.active {
+            border-left: 4px solid var(--active-color);
+            background-color: var(--sidebar-hover);
+        }
+
+        .nav-item i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">Rvops</div>
+        
+        <a href="#" class="nav-item">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="fas fa-address-book"></i> Contatos
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-funnel-dollar"></i> Negócios
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-bullhorn"></i> Marketing
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-cog"></i> Configurações
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>Página de Contatos</h1>
+        <p>Aqui seriam listados os seus contatos do CRM.</p>
+    </div>
+
+</body>
+</html>
